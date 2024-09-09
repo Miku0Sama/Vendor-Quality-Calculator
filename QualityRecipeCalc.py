@@ -30,7 +30,7 @@ def find_combinations(qualities=[1, 20], max_waste=2, flasks_or_gems=False):
     def is_usable(combo):
         combo_count = Counter(combo)
         for quality, count in combo_count.items():
-            if used_numbers[quality] + count > numbers.count(quality):  # Ensure it doesn't exceed the original count
+            if used_numbers[quality] + count > qualities.count(quality):  # Ensure it doesn't exceed the original count
                 return False
         return True
 
